@@ -15,7 +15,7 @@ function convert(number){
         }
 
     }catch(error){
-        return;
+        return '-';
     }
 }
 
@@ -30,6 +30,10 @@ function handle_input(){
 
     if(!isNaN(input)){
         output = convert(parseFloat(input));
+
+        if(output.slice(-1) === '-'){
+            output = '';
+        }
     }
 
     document.getElementById('output').value = output;
