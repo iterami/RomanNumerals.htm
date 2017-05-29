@@ -39,6 +39,10 @@ function handle_input(){
     document.getElementById('output').value = output;
 }
 
+function repo_init(){
+    document.getElementById('input').oninput = handle_input;
+}
+
 var romannumerals = [
   [1000, 'M'],
   [900, 'CM'],
@@ -54,7 +58,3 @@ var romannumerals = [
   [4, 'IV'],
   [1, 'I'],
 ];
-
-window.onload = function(e){
-    document.getElementById('input').oninput = handle_input;
-};
