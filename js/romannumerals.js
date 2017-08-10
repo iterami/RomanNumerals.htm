@@ -6,7 +6,7 @@ function convert(number){
     }
 
     try{
-        for(var i = 0; i < 13; i++){
+        for(var i = 0; i < romannumerals.length; i++){
             if(number < romannumerals[i][0]){
                 continue;
             }
@@ -48,6 +48,12 @@ function repo_init(){
 }
 
 var romannumerals = [
+  [1000000, 'M\u0305'],
+  [500000, 'D\u0305'],
+  [100000, 'C\u0305'],
+  [50000, 'L\u0305'],
+  [10000, 'X\u0305'],
+  [5000, 'V\u0305'],
   [1000, 'M'],
   [900, 'CM'],
   [500, 'D'],
