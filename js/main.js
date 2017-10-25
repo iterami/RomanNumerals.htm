@@ -2,6 +2,11 @@
 
 function repo_init(){
     core_repo_init({
+      'events': {
+        'input': {
+          'oninput': handle_input,
+        },
+      },
       'globals': {
         'romannumerals': [
           [1000000, 'M\u0305'],
@@ -27,6 +32,4 @@ function repo_init(){
       },
       'title': 'RomanNumerals.htm',
     });
-
-    document.getElementById('input').oninput = handle_input;
 }
