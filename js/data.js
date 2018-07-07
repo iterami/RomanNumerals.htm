@@ -22,7 +22,8 @@ function convert(number){
 function handle_input(){
     var input = Number.parseInt(
       document.getElementById('input').value.replace(
-        /,/g, ''
+        /,/g,
+        ''
       ),
       10
     );
