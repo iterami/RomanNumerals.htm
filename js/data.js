@@ -28,7 +28,7 @@ function handle_input(){
     );
     var output = '';
 
-    if(!isNaN(input)){
+    if(!Number.isNaN(input)){
         output = convert(parseFloat(input));
 
         if(output.slice(-1) === '-'){
