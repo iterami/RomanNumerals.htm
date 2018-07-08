@@ -6,7 +6,7 @@ function convert(number){
     }
 
     try{
-        for(var i = 0; i < romannumerals.length; i++){
+        for(let i = 0; i < romannumerals.length; i++){
             if(number < romannumerals[i][0]){
                 continue;
             }
@@ -20,14 +20,14 @@ function convert(number){
 }
 
 function handle_input(){
-    var input = Number.parseInt(
+    let input = Number.parseInt(
       document.getElementById('input').value.replace(
         /,/g,
         ''
       ),
       10
     );
-    var output = '';
+    let output = '';
 
     if(!Number.isNaN(input)){
         output = convert(Number.parseFloat(input));
