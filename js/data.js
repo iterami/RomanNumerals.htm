@@ -20,7 +20,7 @@ function convert(number){
 }
 
 function handle_input(){
-    let input = Number.parseInt(
+    const input = Number.parseInt(
       document.getElementById('input').value.replace(
         /,/g,
         ''
