@@ -29,7 +29,7 @@ function handle_input(){
     );
     let output = '';
 
-    if(!Number.isNaN(input)){
+    if(!globalThis.isNaN(input)){
         output = convert(Number.parseFloat(input));
 
         if(output.slice(-1) === '-'){
