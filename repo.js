@@ -1,7 +1,7 @@
 'use strict';
 
 function convert(number){
-    if(number === 0){
+    if(number <= 0){
         return '';
     }
 
@@ -28,15 +28,13 @@ function handle_input(){
       10
     );
     let output = '';
-
     if(!Number.isNaN(input)){
         output = convert(Number.parseFloat(input));
 
-        if(output.slice(-1) === '-'){
+        if(output === '-'){
             output = '';
         }
     }
-
     document.getElementById('output').value = output;
 }
 
