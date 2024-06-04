@@ -21,7 +21,7 @@ function convert(number){
 
 function handle_input(){
     const input = Number.parseInt(
-      document.getElementById('input').value.replace(
+      core_elements['input'].value.replace(
         /,/g,
         ''
       ),
@@ -35,7 +35,7 @@ function handle_input(){
             output = '';
         }
     }
-    document.getElementById('output').value = output;
+    core_elements['output'].value = output;
 }
 
 function repo_init(){
@@ -69,5 +69,9 @@ function repo_init(){
         ],
       },
       'title': 'RomanNumerals.htm',
+      'ui-elements': [
+        'input',
+        'output',
+      ],
     });
 }
