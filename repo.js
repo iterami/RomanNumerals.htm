@@ -28,7 +28,7 @@ function handle_input(){
       10
     );
     let output = '';
-    if(!Number.isNaN(input)){
+    if(!globalThis.isNaN(input)){
         output = convert(Number.parseFloat(input));
 
         if(output === '-'){
