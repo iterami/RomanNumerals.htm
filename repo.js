@@ -21,7 +21,7 @@ function convert(number){
 
 function handle_input(){
     const input = Number.parseInt(
-      core_elements['input'].value.replace(
+      core_elements.input.value.replace(
         /,/g,
         ''
       ),
@@ -35,7 +35,8 @@ function handle_input(){
             output = '';
         }
     }
-    core_elements['output'].value = output;
+    core_elements.output.value = output;
+    document.title = input + ' = ' + output;
 }
 
 function repo_init(){
