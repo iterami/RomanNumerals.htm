@@ -5,36 +5,26 @@ function convert(number){
         return '';
     }
 
-    try{
-        for(let i = 0; i < romannumerals.length; i++){
-            if(number < romannumerals[i][0]){
-                continue;
-            }
-
-            return romannumerals[i][1] + convert(number - romannumerals[i][0]);
+    for(const numeral of numerals){
+        if(number < numeral[0]){
+            continue;
         }
 
-    }catch(error){
-        return '-';
+        return numeral[1] + convert(number - numeral[0]);
     }
 }
 
 function handle_input(){
-    const input = Number.parseInt(
-      core_elements.input.value.replace(
-        /,/g,
-        ''
-      ),
-      10
-    );
-    let output = '';
-    if(!globalThis.isNaN(input)){
-        output = convert(Number.parseFloat(input));
+    const input = core_elements.input.value;
 
-        if(output === '-'){
-            output = '';
-        }
+    if(input.length === 0
+      || globalThis.isNaN(input)){
+        core_elements.output.value = '';
+        document.title = core_repo_title;
+        return;
     }
+
+    const output = convert(input);
     core_elements.output.value = output;
     document.title = input + ' = ' + output;
 }
@@ -47,7 +37,7 @@ function repo_init(){
         },
       },
       'globals': {
-        'romannumerals': [
+        'numerals': [
           [1000000, 'M\u0305'],
           [500000, 'D\u0305'],
           [100000, 'C\u0305'],
