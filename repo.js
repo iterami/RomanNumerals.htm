@@ -60,7 +60,7 @@ function repo_init(){
         ],
       },
       'title': 'RomanNumerals.htm',
-      'ui-elements': [
+      'ui_elements': [
         'input',
         'output',
       ],
